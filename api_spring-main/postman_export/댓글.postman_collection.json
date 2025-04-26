@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "30972c38-368c-4ed6-ad3e-cf57d7424a35",
+		"name": "댓글",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31838857"
+	},
+	"item": [
+		{
+			"name": "목록",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/api/comment/list?parent_no=132",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"comment",
+						"list"
+					],
+					"query": [
+						{
+							"key": "parent_no",
+							"value": "132"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "등록",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"parent_no\":132,\r\n    \"user_no\":3,\r\n    \"content\":\"댓글 등록 테스트\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/api/comment/regist",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"comment",
+						"regist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "삭제",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/api/comment/delete?no=34",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"comment",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "no",
+							"value": "34"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

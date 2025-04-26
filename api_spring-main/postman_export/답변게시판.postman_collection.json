@@ -1,0 +1,249 @@
+{
+	"info": {
+		"_postman_id": "3e37de23-915c-4880-bde0-e52c83c1a17a",
+		"name": "답변게시판",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31838857"
+	},
+	"item": [
+		{
+			"name": "목록/검색",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjbGllbnRfaWQiOiJjbGllbnRfaWQiLCJpYXQiOjE3NDAyNTAxNTIsImV4cCI6MTc0MDMzNjU1Mn0.MQHjuEqgFtEEkcZs6i8u7jAGfYbwE2Rp6hZVqpunv_w",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{domain}}/api/reply/list",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"reply",
+						"list"
+					],
+					"query": [
+						{
+							"key": "searchType",
+							"value": "title",
+							"disabled": true
+						},
+						{
+							"key": "searchWord",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "상세",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/api/reply/view?no=132",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"reply",
+						"view"
+					],
+					"query": [
+						{
+							"key": "no",
+							"value": "132"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "등록",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "제목",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "내용",
+							"type": "text"
+						},
+						{
+							"key": "user_no",
+							"value": "3",
+							"description": "임시",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{domain}}/api/reply/regist",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"reply",
+						"regist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "수정",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "no",
+							"value": "132",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "수정된 제목",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "수정된 내용",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{domain}}/api/reply/update",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"reply",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "삭제",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"no\":136\r\n}"
+				},
+				"url": {
+					"raw": "{{domain}}/api/reply/delete",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"reply",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "답변",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "답변 제목",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "답변 내용",
+							"type": "text"
+						},
+						{
+							"key": "user_no",
+							"value": "3",
+							"description": "임시",
+							"type": "text"
+						},
+						{
+							"key": "parent_no",
+							"value": "132",
+							"description": "부모글",
+							"type": "text"
+						},
+						{
+							"key": "gno",
+							"value": "132",
+							"description": "그룹번호",
+							"type": "text"
+						},
+						{
+							"key": "ono",
+							"value": "0",
+							"description": "순서",
+							"type": "text"
+						},
+						{
+							"key": "nested",
+							"value": "0",
+							"description": "중첩",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{domain}}/api/reply/reply",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"reply",
+						"reply"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
