@@ -1,4 +1,3 @@
-use react_reply
 -- MySQL dump 10.13  Distrib 8.0.25, for Win64 (x86_64)
 --
 -- Host: localhost    Database: react_reply

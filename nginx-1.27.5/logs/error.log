@@ -1,0 +1,1 @@
+2025/04/27 10:43:37 [error] 17700#15724: *1 CreateFile() "C:\Users\visio\Downloads\nginx-1.27.5/html/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"

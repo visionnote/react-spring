@@ -83,9 +83,9 @@ public class SecurityConfig {
 	public CorsConfigurationSource corsConfigurationSource() {  //이 빈이 등록되어 있어야 한다.
 		CorsConfiguration configuration = new CorsConfiguration();
 		configuration.setAllowCredentials(true); //인증토큰 허용?
-		//configuration.addAllowedOriginPattern("http://localhost:3000/"); // 모든 도메인 허용 원천이 거기란 얘기 (배포시 오류 확인)
-		//configuration.addAllowedOriginPattern("http://localhost/"); // 모든 도메인 허용 원천이 거기란 얘기 (배포시 오류 확인)
-		configuration.addAllowedOriginPattern("http://ec2-54-180-100-219.ap-northeast-2.compute.amazonaws.com/"); // 모든 도메인 허용 원천이 거기란 얘기 (배포시 오류 확인)
+		configuration.addAllowedOriginPattern("http://localhost:3000/"); // 모든 도메인 허용 원천이 거기란 얘기 (배포시 오류 확인)
+	//	configuration.addAllowedOriginPattern("http://localhost/"); // 모든 도메인 허용 원천이 거기란 얘기 (배포시 오류 확인)
+
 		configuration.addAllowedHeader("*"); // 모든 헤더 허용
 		configuration.addAllowedMethod("*"); // 모든 HTTP 메서드 허용 GET PUT
 
