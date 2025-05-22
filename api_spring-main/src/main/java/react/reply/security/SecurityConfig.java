@@ -41,7 +41,7 @@ public class SecurityConfig {
 		// CORS 설정(원천 공유) : 기본적으로 구분된 곳에서 원천차단하는데 REACT에서 PACKAGE.JSON에서 url"프락시" 넣는거 아니다.  배포서버에선 이렇게 동작하지 않고 로컬에서만 가능하다.
 		http.cors(cors -> cors.configurationSource(corsConfigurationSource())); //클라이언트에서 하지 않고 서버에서 해야 한다.
 
-		http.formLogin(c -> {
+		http.formLogin(c -> {nb
 			// 이전페이지가 없는 상태에서 로그인성공 후 이동되는 페이지
 			// c.loginPage("/login");
 		});
